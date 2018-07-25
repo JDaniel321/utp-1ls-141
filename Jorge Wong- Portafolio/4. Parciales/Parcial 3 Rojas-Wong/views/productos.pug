@@ -1,0 +1,59 @@
+extends newBase
+
+block links
+    link(type='text/css', rel='stylesheet', href='./css/profile.css')
+
+block contenido
+    .container
+        .row
+            .col
+                 span.glyphicon.glyphicon-user.icono
+                 h3 Bienvenido, #{usuario} !
+        .row
+            .col
+                h2.text-center Lista de los productos registrados 
+        .row
+            .col
+                 table.table.table-bordered.table-hover.table-responsive
+                    thead.thead-dark
+                        tr
+                            th #
+                            th Nombre 
+                            th descripcion 
+                            th precio 
+                            th cantidad 
+                            
+        
+                        tr 
+                           -var number = 0;
+                            each lista in modelo
+                                form(action='/actualizarP', method='POST')
+                                    td #{number+1}  
+                                    td #{lista.nombre}
+                                        input#nombre(type='text' name='nombre')
+                                    td #{lista.descripcion}
+                                        input#descripcion(type='text' name='descripcion')
+                                    td #{lista.precio}
+                                        input#precio(type='number' name='precio')
+                                    td #{lista.cantidad}
+                                        input#cantidad(type='number' name='cantidad')
+                                    td 
+                                        input(type='submit',value='Actualizar').btn.btn-success
+                                form(action='/eliminarP', method='POST')
+                                    input(type='hidden', value=lista.nombre, name='nombre')
+                                    td
+                                        input(type='submit',value='Borrar').btn.btn-danger
+                        tr 
+                            form(method='POST', action='/insertarP')
+                                td Nuevo
+                                td
+                                    input#nombre(type='text' name='nombre')
+                                td
+                                    input#descripcion(type='text' name='descripcion') 
+                                td
+                                    input#precio(type='number' name='precio')
+                                td
+                                    input#cantidad(type='text' name='cantidad')
+                    
+                                td(colspan='2' style='text-align:center')
+                                    input.btn.btn-primary(type='submit' value='Insertar') 
