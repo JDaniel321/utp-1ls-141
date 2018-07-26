@@ -1,0 +1,54 @@
+extends inicio
+block links
+   link(type='text/css', rel='stylesheet', href='./css/categoria.css')
+
+block contenido
+    
+        .row
+            .col
+                 h3 Bienvenido, #{user} !
+        .row
+            .col
+                h2 Lista de las categorias registrados
+        .row
+            .col
+                table.table.table-bordered.table-hover.table-responsive
+                    thead.thead-dark
+                        tr
+                            //- th #
+                            th Nombre 
+                            th codigo
+                            th  
+                            th
+
+                        tr 
+                            -var number = 0;
+                            
+                            each lista in modelo
+                             tr
+                                form(action='/actualizarC', method='POST')
+                                    //- td #{number+1}  
+                                    td #{lista.nombre}
+                                        input#nombre(type='text' name='nombre')
+                                    td #{lista.codigo}
+                                        input#codigo(type="number" name="codigo")
+                                    td 
+                                        input(type='submit',value='Actualizar').btn.btn-success
+                                form(action='/eliminarC', method='POST')
+                                    input(type='hidden', value=lista.codigo, name='codigo')
+                                    td
+                                        input(type='submit',value='Borrar').btn.btn-danger
+                        tr 
+                            form(method='POST', action='/insertarC')
+                                //- td Nuevo
+                                td
+                                    input#nombre(type='text' name='nombre')
+                                td 
+                                    input#codigo(type="text" name="codigo")
+                                    br
+                                    br
+                                    input.btn.btn-primary(type='submit' value='Insertar') 
+            form(action="/menu" method="get")
+                input.btn(type="submit" value="Regresar al Menu").btn.btn-warning
+
+

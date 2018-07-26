@@ -1,0 +1,60 @@
+extends inicio
+block links
+   link(type='text/css', rel='stylesheet', href='./css/categoria.css')
+
+block contenido
+    .container
+        .row
+            .col
+                 h3 Bienvenido, #{user} !
+        .row
+            .col
+                h2 Lista de los Usuarios registrados
+        .row
+            .col
+                 table.table.table-bordered.table-hover.table-responsive
+                    thead.thead-dark
+                        tr
+                            //- th #
+                            th Nombre 
+                            th Apellido 
+                            th Edad 
+                            th Correo
+                            th
+                            th
+                        tr 
+                            -var number = 0;
+                            each lista in modelo
+                             tr
+                                form(action='actualizarU', method='POST')
+                                    //- td #{number+1}  
+                                    td #{lista.nombre}
+                                        input#nombre(type='text' name='nombre')
+                                    td #{lista.apellido}
+                                        input#Apellido(type='text' name='apellido')
+                                    td #{lista.edad}
+                                        input#edad(type='number' name='edad')
+                                    td #{lista.correo}
+                                        input#correo(type='email' name='correo')
+                                    td 
+                                        input(type='submit',value='Actualizar').btn.btn-success
+                                form(action='/eliminarU', method='POST')
+                                    input(type='hidden', value=lista.correo, name='correo')
+                                    td
+                                        input(type='submit',value='Borrar').btn.btn-danger
+                        tr 
+                            form(method='POST', action='/insertarU')
+                                //- td Nuevo
+                                td
+                                    input#nombre(type='text' name='nombre')
+                                td
+                                    input#apellido(type='text' name='apellido') 
+                                td
+                                    input#edad(type='number' name='edad')
+                                td
+                                    input#correo(type='email' name='correo')   
+                                td 
+                                    input#password(type="password" name="password")
+                                    input.btn.btn-primary(type='submit' value='Insertar') 
+            form(action="/menu" method="get")
+                input.btn(type="submit" value="Regresar al Menu").btn.btn-warning

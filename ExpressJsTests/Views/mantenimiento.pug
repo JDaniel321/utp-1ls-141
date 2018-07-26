@@ -1,0 +1,62 @@
+extends base1
+
+block links
+    link(type='text/css', rel='stylesheet', href='./css/login.css')
+    
+block contenido
+  
+    .text-center
+        h2 Iniciar Sesión / Registrarse
+    .container
+      form.form-signin.col-md-5
+        span.glyphicon.glyphicon-user.uslogin(aria-hidden='true')
+        |             
+        h2.form-signin-heading.text-center Bienvenido
+        |             
+        label.sr-only(for='input1Email') Email address
+        |             
+        input#input1Email.form-control(type='email', placeholder='Email address', required='', autofocus='')
+        // Spacer
+        hr.spacer
+        // Spacer
+        label.sr-only(for='inputpPassword') Password
+        |             
+        input#inputpPassword.form-control(type='password', placeholder='Password', required='')
+        |             
+        .checkbox
+          label
+            input(type='checkbox', value='remember-me')
+            |  Remember me
+        |             
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') entrar    
+      
+      form.form-group.col-md-5(method='POST')
+            span.glyphicon.glyphicon-user.uslogin(aria-hidden='true')
+            |             
+            h2.form-signin-heading.text-center Crear cuenta
+            label.sr-only(for='inputNombre') Nombre
+            |
+            input#Nombre.form-control(type='text', placeholder='Nombre', required='')
+            br
+            label.sr-only(for='inputApellido') Apellido
+            |
+            input#Apellido.form-control(type='text', placeholder='Apellido', required='')
+            br
+            label.sr-only(for='inputEdad') Edad
+            |
+            input#Edad.form-control(type='number', placeholder='Edad', required='')
+            br
+            label.sr-only(for='input2email') Email
+            |
+            input#email.form-control(type='email', placeholder='Email', required='')
+            br
+            label.sr-only(for='inputpaPassword') Password
+            |             
+            input#password.form-control(type='password', placeholder='Password', required='')
+            br
+            label.sr-only(for='inputPasswordConf') Password
+            |             
+            input#passwordConf.form-control(type='password', placeholder='Confirmar Password', required='')
+            br
+            button.btn.btn-lg.btn-primary.btn-block(type='submit') Crear
+            

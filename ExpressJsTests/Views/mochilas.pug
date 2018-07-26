@@ -1,0 +1,48 @@
+extends inicio
+
+block links
+   link(type='text/css', rel='stylesheet', href='./css/mochilas.css')
+
+block contenido
+    br
+    br
+    h2.col-md-6 Mochilas
+    .col-md-6
+    form(target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post')
+        input(type='hidden' name='cmd' value='_s-xclick')
+        input(type='hidden' name='hosted_button_id' value='7NHKRQPEA2Z9Q')
+        table
+            tr
+                td
+                    input(type='hidden' name='on0' value='Mochilas')
+                    | Mochilas
+            tr
+                td
+                    select(name='os0')
+                        option(value='Mochila para Laptop') Mochila para Laptop $55.00 USD
+                        option(value='Mochila de Nylon') Mochila de Nylon $30.00 USD
+                        option(value='Mochila de Rrueda') Mochila de Rrueda $29.95 USD
+                        option(value='Mochila Overwatch') Mochila Overwatch $50.00 USD
+                        option(value='Mochila Negra') Mochila Negra $43.30 USD
+        input(type='hidden' name='currency_code' value='USD')
+        input(type='image' src='https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif' border='0' name='submit' alt='PayPal - The safer, easier way to pay online!')
+        img(alt='' border='0' src='https://www.paypalobjects.com/es_XC/i/scr/pixel.gif' width='1' height='1')
+
+    hr.line
+    -var number = 1;
+    each lista in modelo
+        .card-columns 
+            .card.col-md-3(style='width: 25rem;')
+                img.card-img-top(src=lista.img width="300" height="300" alt='Card image cap')
+                .card-body.text-center   
+                    //- td #{number+1}
+                    br
+                    td #{lista.nombre} 
+                    br 
+                    p Descripción: #{lista.descripcion}
+                    br
+                    p Cantidad: #{lista.cantidad}
+                    br
+                    p Precio: #{lista.precio}
+                    br
+                    

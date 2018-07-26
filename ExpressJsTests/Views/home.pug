@@ -1,0 +1,96 @@
+extends inicio
+
+block links
+   link(type='text/css', rel='stylesheet', href='./css/home.css')
+   
+   
+
+    
+block contenido
+       
+    .slider
+      .slider-wrap
+        .container
+          .row
+            .col-md-12
+              #mogo-slider.carousel.slide(data-ride='carousel')
+                // Wrapper for slides
+                .carousel-inner.text-center(role='listbox')
+                  .item.active
+                    .slider-content
+                      p.slider-caption
+                        img.element(src="./fotos/articulos.png") 
+                      |                                     
+                      span.verticle-bar
+                      |                                     
+                      .btn-action
+                        a.btn.btn-primary(href='pago') ¡Compralo ya!
+                  |                             
+                  .item
+                    .slider-content
+                      p.slider-caption
+                        img.element(src="./fotos/articulos1.png") 
+                      |                                     
+                      h3.slider-titile.text-uppercase
+                                                     
+                      span.verticle-bar
+                      |                                     
+                      .btn-action
+                        a.btn.btn-primary(href='pago') ¡Compralo ya!
+                  |                             
+                  .item
+                    .slider-content
+                      p.slider-caption
+                        img.element(src="./fotos/articulos2.png") 
+                      |                                     
+                      h3.slider-titile.text-uppercase
+                                                            
+                      span.verticle-bar
+                      |                                     
+                      .btn-action
+                        a.btn.btn-primary(href='pago') ¡Compralo ya!
+                  |                             
+                  .item
+                    .slider-content
+                      p.slider-caption
+                        img.element(src="./fotos/articulos3.png") 
+                      |                                     
+                      h3.slider-titile.text-uppercase
+                                                          
+                      span.verticle-bar
+                      |                                     
+                      .btn-action
+                        a.btn.btn-primary(href='pago') ¡Compralo ya!
+                // Indicators
+                ol.carousel-indicators
+                  li.active(data-target='#mogo-slider', data-slide-to='0')
+                    .indicator-inner
+                      //span.number 01
+                      br                                     
+                      //span.text.text-uppercase Intro
+                  |                             
+                  li(data-target='#mogo-slider', data-slide-to='1')
+                    .indicator-inner
+                      //span.number 02
+                      br                                    
+                      //span.text.text-uppercase Work
+                  |                             
+                  li(data-target='#mogo-slider', data-slide-to='2')
+                    .indicator-inner
+                      //span.number 03
+                      br                                   
+                      //span.text.text-uppercase About
+                  |                             
+                  li(data-target='#mogo-slider', data-slide-to='3')
+                    .indicator-inner
+                      //span.number 04
+                      br                                     
+                      //span.text.text-uppercase Contracts
+    .card
+      .card-header.text-center.h3
+        | Misión 
+      |   
+      .card-body
+        blockquote.blockquote.mb-0
+          p
+            | Esta página tiene como propósito hacer más cómodo y rápido el proceso de compra de estos materiales, pudiendo visualizar y comprar todos los productos que se necesitan en una sola página web rápida y cómodamente desde cualquier lugar de Panamá con conexión a internet.

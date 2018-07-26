@@ -1,0 +1,98 @@
+extends inicio
+
+block links
+   link(type='text/css', rel='stylesheet', href='./css/proceso_compra.css')
+      
+block contenido
+     
+    .container
+      form.form-signin.col-md-5
+        span.glyphicon.glyphicon-map-marker.uslogin.col-md-3(aria-hidden='true')
+        |       
+        h2.form-signin-heading.text-center Dirección de entrega
+        hr.style-seven
+        |             
+        label.sr-only.mx-sm-3.mb-2(for='inputName') Nombre
+        |             
+        input#inputName.form-control(type='text', placeholder='nombre', required='', autofocus='')
+        // Spacer
+        //hr.spacer
+        br
+        // Spacer
+        label.sr-only(for='inputApellido') Apellido
+        |             
+        input#inputApellido.form-control(type='text', placeholder='Apellido', required='')
+        br
+        .form-group
+            label(for='Provincia') Provincia
+            |     
+            select#Provincia.form-control
+                option Panamá
+                |       
+                option Coclé
+                |       
+                option Veraguas
+                |       
+                option Colón
+                |       
+                option Los Santos
+                |
+                option Chiriquí
+                |
+                option Bocas del Toro
+        br        
+        label.sr-only(for='Distrito') Distrito
+        |             
+        input#Distrito.form-control(type='text', placeholder='Distrito', required='')
+        br
+        label.sr-only(for='Corregimiento') Corregimiento
+        |             
+        input#Corregimiento.form-control(type='text', placeholder='Corregimiento', required='')
+        br
+        label.sr-only(for='Calle') Calle
+        |             
+        input#Calle.form-control(type='text', placeholder='Calle', required='')
+        br         
+        .form-group
+            label(for='exampleFormControlTextarea1') Example textarea
+            |     
+            textarea#exampleFormControlTextarea1.form-control(rows='3')
+        br    
+        label.sr-only(for='telefono') Teléfono
+        |            
+        input#telefono.form-control(type='text', placeholder='telefono', required='')
+        br                
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') Entrar    
+      
+       
+      form.form-group.col-md-5
+            span.glyphicon.glyphicon-credit-card.uslogin(aria-hidden='true')
+            |             
+            h2.form-signin-heading.text-center Forma de pago 
+            hr.style-seven
+            label.sr-only(for='inputNombre') Nombre
+            |
+            input#inputNombre.form-control(type='text', placeholder='Nombre', required='')
+            br
+            label.sr-only(for='inputApellido') Apellido
+            |
+            input#inputApellido.form-control(type='text', placeholder='Apellido', required='')
+            br
+            label.sr-only(for='inputEdad') Edad
+            |
+            input#inputEdad.form-control(type='number', placeholder='Edad', required='')
+            br
+            label.sr-only(for='inputEmail') Email
+            |
+            input#inputEmail.form-control(type='email', placeholder='Email', required='')
+            br
+            label.sr-only(for='inputPassword') Password
+            |             
+            input#inputPassword.form-control(type='password', placeholder='Password', required='')
+            br
+            label.sr-only(for='inputPasswordConf') Password
+            |             
+            input#inputPasswordConf.form-control(type='password', placeholder='Confirmar Password', required='')
+            br
+            button.btn.btn-lg.btn-primary.btn-block(type='submit') Crear
+            

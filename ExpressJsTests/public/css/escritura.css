@@ -1,0 +1,24 @@
+.line{ 
+    display:block;
+    border:none;
+    color:#FFC700;
+    height:2px;
+    background:#1a6cef;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#FFC700), to(#1a6cef));
+}
+
+.btn.compra{
+    background-color:#FFC700;
+    color: black;
+    
+}
+body{
+    margin:1%;
+}
+
+
+.card{
+    margin-right: 5%;
+    cursor: pointer;
+    
+}

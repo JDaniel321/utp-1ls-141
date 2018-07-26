@@ -1,0 +1,30 @@
+extends inicio
+
+block links
+   link(type='text/css', rel='stylesheet', href='./css/mochilas.css')
+
+block contenido
+    .cointainer
+        form.form-signin.border.rounded(method='post')
+            .text-center.mb-5
+                h1.h3.mb-3.font-weight-normal Iniciar sesi&oacute;n
+            |       
+            .form-label-group
+                input#inputEmail.form-control(type='email', required='', name='email', autofocus='')
+                |         
+                label(for='inputEmail') Correo
+            |       
+            .form-label-group
+                input#inputPassword.form-control(type='password', name='password' , required='')
+                |         
+                label(for='inputPassword') Contrase&ntilde;a
+            |       
+            button.btn.btn-lg.btn-primary.btn-block(type='submit') Iniciar sesi&oacute;n
+            br
+        // Optional JavaScript
+        // jQuery first, then Popper.js, then Bootstrap JS
+        script(src='./statics/bootstrap/js/bootstrap.min.js')
+        |     
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js', integrity='sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ', crossorigin='anonymous')
+        |     
+        script(src='./statics/jquery/jquery-3.3.1.min.js')

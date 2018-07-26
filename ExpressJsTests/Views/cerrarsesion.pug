@@ -1,0 +1,127 @@
+extends inicio
+
+block links
+  link(type='text/css', rel='stylesheet', href='./css/home.css')
+  script(src='/javascript/cerrarsesion.js')
+   
+
+    
+block contenido
+       
+    .slider
+      .slider-wrap
+        .container
+          .row
+            .col-md-12
+              #mogo-slider.carousel.slide(data-ride='carousel')
+                // Wrapper for slides
+                .carousel-inner.text-center(role='listbox')
+                  .item.active
+                    .slider-content
+                      p.slider-caption
+                        img.element(src="./fotos/articulos.png") 
+                      |                                     
+                      span.verticle-bar
+                      |                                     
+                      .btn-action
+                        a.btn.btn-primary(href='pago') ¡Compralo ya!
+                  |                             
+                  .item
+                    .slider-content
+                      p.slider-caption
+                        img.element(src="./fotos/articulos1.png") 
+                      |                                     
+                      h3.slider-titile.text-uppercase
+                                                     
+                      span.verticle-bar
+                      |                                     
+                      .btn-action
+                        a.btn.btn-primary(href='pago') ¡Compralo ya!
+                  |                             
+                  .item
+                    .slider-content
+                      p.slider-caption
+                        img.element(src="./fotos/articulos2.png") 
+                      |                                     
+                      h3.slider-titile.text-uppercase
+                                                            
+                      span.verticle-bar
+                      |                                     
+                      .btn-action
+                        a.btn.btn-primary(href='pago') ¡Compralo ya!
+                  |                             
+                  .item
+                    .slider-content
+                      p.slider-caption
+                        img.element(src="./fotos/articulos3.png") 
+                      |                                     
+                      h3.slider-titile.text-uppercase
+                                                          
+                      span.verticle-bar
+                      |                                     
+                      .btn-action
+                        a.btn.btn-primary(href='pago') ¡Compralo ya!
+                // Indicators
+                ol.carousel-indicators
+                  li.active(data-target='#mogo-slider', data-slide-to='0')
+                    .indicator-inner
+                      //span.number 01
+                      br                                     
+                      //span.text.text-uppercase Intro
+                  |                             
+                  li(data-target='#mogo-slider', data-slide-to='1')
+                    .indicator-inner
+                      //span.number 02
+                      br                                    
+                      //span.text.text-uppercase Work
+                  |                             
+                  li(data-target='#mogo-slider', data-slide-to='2')
+                    .indicator-inner
+                      //span.number 03
+                      br                                   
+                      //span.text.text-uppercase About
+                  |                             
+                  li(data-target='#mogo-slider', data-slide-to='3')
+                    .indicator-inner
+                      //span.number 04
+                      br                                     
+                      //span.text.text-uppercase Contracts
+    h4 Productos más vendidos
+    .card-columns
+      .card.col-md-3
+        img.card-img-top(src='./fotos/mochila1.png', alt='Card image', style='width:35%')
+        |     
+        .card-body
+          h4.card-title Mochila de Pony
+          p   
+           h6.card-text Insertar descripción del producto
+          |       
+          a.btn.btn-primary(href='pago') Comprar
+      .card.col-md-3
+        img.card-img-top(src='./fotos/mochila1.png', alt='Card image', style='width:35%')
+        |     
+        .card-body
+          h4.card-title Mochila de Pony
+          p   
+           h6.card-text Insertar descripción del producto
+          |       
+          a.btn.btn-primary(href='pago') Comprar
+      .card.col-md-3
+        img.card-img-top(src='./fotos/mochila1.png', alt='Card image', style='width:35%')
+        |     
+        .card-body
+          h4.card-title Mochila de Pony
+          p   
+           h6.card-text Insertar descripción del producto
+          |       
+          a.btn.btn-primary(href='pago') Comprar
+      .card.col-md-3
+        img.card-img-top(src='./fotos/mochila1.png', alt='Card image', style='width:35%')
+        |     
+        .card-body
+          h4.card-title Mochila de Pony
+          p   
+           h6.card-text Insertar descripción del producto
+          |       
+          a.btn.btn-primary(href='pago') Comprar  
+                   

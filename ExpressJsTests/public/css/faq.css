@@ -1,0 +1,12 @@
+.faq{
+
+    width: 22em;
+    height: 20em;
+    margin-right: -30px;
+}
+
+h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color:#1a6cef;
+}

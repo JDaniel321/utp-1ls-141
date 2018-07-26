@@ -1,0 +1,104 @@
+extends inicio
+
+block links
+   link(type='text/css', rel='stylesheet', href='./css/pago.css')
+
+block contenido
+  br
+  br
+  h2 Pago
+  hr.line
+  .fondo  
+    .panel.panel-login.col-md-8
+                .panel-heading
+                    .row
+                        .col-xs-6
+                            h4.text-right Dirección de entrega
+                .panel-body
+                    .row
+                        .col-lg-12            
+                          form.form-horizontal.col-md-12
+                            
+                            // Text input
+                            .form-group
+            
+                              .col-md-6
+                                input#nombre.form-control.input-md(name='nombre', type='text', placeholder='nombre', required='')
+          
+             
+                              .col-md-6
+                                input#apellido.form-control.input-md(name='apellido', type='text', placeholder='apellido', required='')  
+                              // Text input
+        
+        
+                            .form-group
+          
+            
+                              .col-md-6
+                                select#provincia.form-control(name='provincia')
+                                  option(value='1') Bocas del Toro
+                    
+                                  option(value='2') Panam&aacute;
+                     
+                                  option(value='3') Cocl&eacute;
+                     
+                                  option(value='4') Veraguas
+                     
+                                  option(value='5') Col&oacute;n
+                     
+                                  option(value='6') Chiriqu
+                     
+                                  option(value='7') Herrera
+                     
+                                  option(value='8') Los Santos
+                     
+                                  option(value='9') Darien
+                     
+                                  option(value='10') Panam&aacute; Oeste
+                              .col-md-6
+                                input#corregimiento.form-control.input-md(name='corregimiento', type='text', placeholder='corregimiento', required='')    
+        
+                            .form-group
+          
+                              .col-md-6
+                                input#calle.form-control.input-md(name='calle', type='text', placeholder='calle', required='')
+                              .col-md-6
+                                input#distrito.form-control.input-md(name='distrito', type='text', placeholder='distrito', required='')  
+                            // Textarea
+                            .form-group
+             
+                              .col-md-8
+                                textarea#detalles.form-control(name='detalles') coloque especificaciones sobre el &aacute;rea de entrega
+        
+    form.col-md-3.formpago
+        h4.text-center Total
+        
+        .card-body
+            p.card-text Subtotal: 
+             
+            p.card-text Total: 
+            
+            form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
+                input(type='hidden', name='cmd', value='_xclick')
+      
+                input(type='hidden', name='business', value='G8PMQZL9VDW5S')
+      
+                input(type='hidden', name='lc', value='US')
+      
+                input(type='hidden', name='button_subtype', value='services')
+      
+                input(type='hidden', name='no_note', value='0')
+      
+                input(type='hidden', name='cn', value='Dar instrucciones especiales al vendedor:')
+      
+                input(type='hidden', name='no_shipping', value='2')
+      
+                input(type='hidden', name='currency_code', value='USD')
+      
+                input(type='hidden', name='tax_rate', value='7.000')
+      
+                input(type='hidden', name='bn', value='PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted')
+      
+                input(type='image', src='https://www.paypalobjects.com/es_XC/i/btn/btn_buynowCC_LG.gif', border='0', name='submit', alt='PayPal, la forma más segura y rápida de pagar en línea.')
+      
+                img(alt='', border='0', src='https://www.paypalobjects.com/es_XC/i/scr/pixel.gif', width='1', height='1')

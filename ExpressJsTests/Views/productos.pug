@@ -1,0 +1,72 @@
+extends inicio
+block links
+   link(type='text/css', rel='stylesheet', href='./css/categoria.css')
+
+block contenido
+    br
+    br
+    br
+    .container
+        .row
+            .col
+                 h3 Bienvenido, #{user} !
+        .row
+            .col
+                h2 Lista de los productos registrados
+        .row
+            .col
+                 table.table.table-dark.table-bordered.table-hover.table-responsive
+                    thead.thead-dark
+                        tr
+                            //- th #
+                            th Nombre 
+                            th descripcion 
+                            th cantidad 
+                            th precio
+                            th imagen
+                            th codigo
+                            th
+                            th
+                        tr
+                            -var number = 0;
+                            each lista in modelos
+                             tr
+                                form(action='/actualizarP', method='POST')
+                                    //- td #{number+1}  
+                                    td #{lista.nombre}
+                                        input#nombre(type='text' name='nombre')
+                                    td #{lista.descripcion}
+                                        input#descripcion(type='text' name='descripcion')
+                                    td #{lista.cantidad}
+                                        input#cantidad(type='number' name='cantidad')
+                                    td #{lista.precio}
+                                        input#precio(type='number' name='precio')
+                                    td #{lista.img}
+                                        input#img(type="text" name="img")
+                                    td #{lista.codigo}
+                                        br
+                                        input#codigo(type="number" name="codigo")
+                                    td 
+                                        input(type='submit',value='Actualizar').btn.btn-success
+                                form(action='/eliminar', method='POST')
+                                    input(type='hidden', value=lista.nombre, name='nombre')
+                                    td
+                                        input(type='submit',value='Borrar').btn.btn-danger
+                        tr 
+                            form(method='POST', action='/insertarP')
+                                //- td Nuevo
+                                td
+                                    input#nombre(type='text' name='nombre')
+                                td
+                                    input#descripcion(type='text' name='descripcion') 
+                                td
+                                    input#cantidad(type='number' name='cantidad')
+                                td
+                                    input#precio(type='number' name='precio')   
+                                td
+                                    input#img(name="img" type="text")
+                                td 
+                                    input#codigo(type="number" name="codigo")
+                                    input.btn.btn-primary(type='submit' value='Insertar') 
+            form(action="/menu" method="get")
+                input.btn(type="submit" value="Regresar al Menu").btn.btn-warning

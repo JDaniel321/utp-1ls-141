@@ -1,0 +1,143 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    |   
+    meta(http-equiv="X-UA-Compatible", content="width=device-width, initial-scale=1.0")
+    
+    title La última hora
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(href=("https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"))
+    link(href=("Vendor/bootstrap/css/bootstrap.min.css"))
+    link(type='text/css', rel='stylesheet', href='./css/main.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    
+    
+    block links
+                                 
+  body #[br]
+    
+    .container-fluid
+        .row
+                       
+                    
+            .navbar-wrapper 
+                .container-fluid       
+                    nav.navbar.navbar-fixed-top
+                        .container
+                            .navbar-header
+                                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                                span.sr-only Toggle navigation
+                                span.icon-bar
+                                span.icon-bar
+                                span.icon-bar
+                                a(href="home")
+                                    img.logo2(src="./fotos/logo.png") 
+                                    
+                                            
+                            #navbar.navbar-collapse.collapse
+                                ul.nav.navbar-nav
+                                                          
+                                    li.dropdown
+                                        a(href='mochilas')
+                                            | Mochilas 
+                                      
+                                    li
+                                        a(href='cuadernos') Cuadernos, libretas y blocks
+                                    |                         
+                                    li.dropdown
+                                        a(href='Arte') Arte y Utiles
+                                            
+                                    li.dropdown
+                                        a(href='escritura')
+                                            |   Escritura 
+                                            
+                                                           
+                                                 
+                       
+               
+                                ul.nav.navbar-nav.pull-right
+                                    li.dropdown
+                                        a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                                            | Iniciar sesión
+                                            span.caret
+                                                                    
+                                            ul.dropdown-menu
+                                                li
+                                                    a(href='login') Entrar
+                                                li
+                                                    a(href='logout') Cerrar sesión  
+                                                
+            block contenido 
+            br                  
+    .piepag
+        section#footer
+            .container
+                .row.text-center.text-xs-center.text-sm-left.text-md-left
+                    .col-xs-12.col-sm-4.col-md-4
+                        h5.text-left Contáctanos
+                        ul.list-unstyled.quick-links.text-left
+                            li
+                                a(href='') 200-4455 Asesoria
+                                            
+                            li
+                                a(href='') 330-2445 Pedidos y cotizaciones
+                                            
+                            li
+                                a(href='') clientes@laultimahora.com.pa
+                                            
+                            li
+                                a(href='faq') FAQ
+                                                    
+                    .col-xs-12.col-sm-4.col-md-4
+                        h5.text-left Información de compra
+                        ul.list-unstyled.quick-links.text-left
+                            li
+                                a(href='') Política de reembolso
+                                            
+                            li
+                                a(href='') Política de devoluciones
+                                            
+                            li
+                                a(href='') Política de cambios
+                                            
+                    .col-xs-12.col-sm-4.col-md-4
+                        h5.text-left Acerca de nosotros
+                        ul.list-unstyled.quick-links.text-left
+                            li
+                                a(href='') Información de entrega
+                                            
+                            li
+                                a(href='') Acerca de La Última Hora
+                .text-center            
+                                            
+                    .row                   
+                        .col-xs-12.col-sm-12.col-md-12.mt-2.mt-sm-5
+                        ul.list-unstyled.list-inline.social.text-center
+                            li.list-inline-item
+                                a(href='')
+                                    i.fa.fa-facebook
+                            li.list-inline-item
+                                a(href='')
+                                    i.fa.fa-twitter
+                            li.list-inline-item
+                                a(href='')
+                                    i.fa.fa-instagram
+                            li.list-inline-item
+                                a(href='')
+                                    i.fa.fa-google-plus
+                            li.list-inline-item
+                                a(href='', target='_blank')
+                                    i.fa.fa-envelope
+                    .row    
+                        .col-xs-12.col-sm-12.col-md-12.mt-2.mt-sm-2.text-center.text-white
+                            p
+                                u
+                                    a(href='') Website La Ultima Hora
+                                        |  Página dedicada a la venta de materiales escolares y oficina
+                                        | 
+                            p.h6 &amp;copy All right Reversed.
+                                a.text-green.ml-2(href='https://www.sunlimetech.com', target='_blank') Corporación La Última Hora        

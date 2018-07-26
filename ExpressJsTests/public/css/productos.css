@@ -1,0 +1,17 @@
+.btn-primary {
+    background-color:#ff9802;
+    
+}
+
+.botones{
+
+    margin-left:15px;
+    top: 30px;
+    width: 20%;
+}
+
+
+
+.btn-primary:hover {
+    background-color: #ff9802;
+}

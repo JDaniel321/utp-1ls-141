@@ -1,0 +1,46 @@
+extends inicio
+
+block links
+   link(type='text/css', rel='stylesheet', href='./css/mochilas.css')
+
+block contenido
+    br
+    br
+    h2.col-md-6 Cuadernos, Libretas y Blocks
+    .col-md-6
+    form(target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post')
+        input(type='hidden' name='cmd' value='_s-xclick')
+        input(type='hidden' name='hosted_button_id' value='W5Q2WM293SQ8G')
+        table
+            tr
+                td
+                    input(type='hidden' name='on0' value='Cuadernos y Librtas')
+                    | Cuadernos y Librtas
+            tr
+                td
+                    select(name='os0')
+                        option(value='Libreta Corsario 1M') Libreta Corsario 1M $3.60 USD
+                        option(value='Libreta Corsario 5M') Libreta Corsario 5M $5.95 USD
+                        option(value='Cuaderno Corsario') Cuaderno Corsario $2.30 USD
+                        option(value='Libreta Corsario') Libreta Corsario $1.50 USD
+                        option(value='Pad') Pad $2.00 USD
+        input(type='hidden' name='currency_code' value='USD')
+        input(type='image' src='https://www.paypalobjects.com/es_XC/i/btn/btn_cart_LG.gif' border='0' name='submit' alt='PayPal - The safer, easier way to pay online!')
+        img(alt='' border='0' src='https://www.paypalobjects.com/es_XC/i/scr/pixel.gif' width='1' height='1')
+    hr.line
+    -var number = 1;
+    each lista in modelo
+        .card-columns 
+            .card.col-md-3(style='width: 25rem;')
+                img.card-img-top(src=lista.img width="300" height="300" alt='Card image cap')
+                .card-body.text-center   
+                    //- td #{number+1}
+                    br
+                    td #{lista.nombre} 
+                    br 
+                    p Descripción: #{lista.descripcion}
+                    br
+                    p Cantidad: #{lista.cantidad}
+                    br
+                    p Precio: #{lista.precio}
+                    br

@@ -1,0 +1,83 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    |   
+    meta(http-equiv="X-UA-Compatible", content="width=device-width, initial-scale=1.0")
+    title La última Hora
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    
+    link(href=("./Vendor/bootstrap/css/bootstrap.min.css"))
+                                 
+  body #[br] 
+    .container-fluid
+        .row
+            .principio.col-md-12
+                .header.col-md-3
+                    img(src="Imagenes/logo.jpg")                    
+                .container.col-md-1.offset-md-1(style=("width: 30%;"))
+                    form
+                        .input-group
+                        input(type=("text") class=("form-control") placeholder=("Search") name=("search"))
+                .input-group-btn.col-md-1(style=("width: 20%;")) 
+                    button(class=("btn btn-default") type=("submit"))  
+                        i.glyphicon.glyphicon-search
+                .cuenta.col-md-2(style=("width: 9%;"))  
+                    button.glyphicon.glyphicon-user.btn.btn-default #[br] Usuario 
+                .carrito.col-md-2(style=("width: 9%;")) 
+                    button.glyphicon.glyphicon-shopping-cart.btn.btn-info.btn-lg #[br] Carrito 
+            p        
+            .menu.col-md-12(style=("color:black;"))
+                nav.navbar.navbar-expand-lg.navbar-light.bg-light(style=("background-color: #5bc0de; border-color:#5bc0de;")) 
+                    ul.nav.navbar-nav(style=("color:black;"))
+                        li.navbar-collapse
+                            a.nav-link(href=("#")) Mochilas
+                        li.navbar-collapse
+                            a.nav-link(href=("#")) Cuadernos, libretas y blocks
+                        li.navbar-collapse
+                            a.nav-link(href=("#")) Escritura
+                        li.navbar-collapse
+                            a.nav-link(href=("#")) Arte y diseño                
+            .piepag
+            body.page-body
+            .col-md-5.offset-md-7
+            h4 Iniciar Sesion/Registrar
+            h4.col-md-6.offset-md-6 Cliente
+             h4.col-md-6.offset-md-3 Crear Cuenta
+            .form-group.row
+            label.col-sm-4.offset-sm-8 Usuario
+            .col-md-2.offset-md-10
+            input.form-control#user(type='Text')
+            .form-group.row
+            label.col-sm-4.offset-sm-8 Contraseña
+            .col-md-2.offset-md-10
+            input.form-control#user(type='password')
+            .form-group.row
+            .col-md-2.offset-md-10
+            button.btn.btn-primary Conectar
+
+            
+
+            footer.page-footer.font-small.mt-6(style=("position: absolute; bottom: 0; width: 100%; height: 40px;"))      
+                    div.container
+                        div.row
+                            div.col-md-4
+                                h6.text-uppercase.font-weight-bold Contactos
+                                hr.deep-purple
+                                p (6824-2035) asesoria #[br] (6945-9656)/(6824-2035) pedidos y cotizaciones
+                            div.col-md-4 
+                                h6.text-uppercase.font-weight-bold  Información del sitio
+                                hr.deep-purple
+                                p 
+                                    button.btn.btn-info.btn-sm Políticas de reembolso o cambio 
+                                p    
+                                    button.btn.btn-info.btn-sm Políticas de devoluciones 
+                            div.col-md-2   
+                                h6.text-uppercase.font-weight-bold  Acerca de nosotros
+                                hr.deep-purple
+                                p 
+                                    button.btn.btn-info.btn-sm Información de entrega 
+                                p    
+                                    button.btn.btn-info.btn-sm Acerca de La útlima hora                  

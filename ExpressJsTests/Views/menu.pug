@@ -1,0 +1,28 @@
+extends inicio
+
+block links
+   link(type='text/css', rel='stylesheet', href='./css/mochilas.css')
+
+block contenido
+        br
+        br
+        
+        h2 Menú del Administrador
+        hr.line
+        h3 Escoja la tabla que desee trabajar
+        br
+        
+        form(action="productos")
+            br
+            br
+            button.btn.btn-lg.btn-success.btn-block(type='submit') Productos
+        
+        form(action="usuario")
+            br
+            br       
+            button.btn.btn-lg.btn-info.btn-block(type='submit') Usuarios
+        
+        form(action="categoria")
+            br
+            br        
+            button.btn.btn-lg.btn-warning.btn-block(type='submit') Categoria

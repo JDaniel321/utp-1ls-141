@@ -1,0 +1,21 @@
+.table{
+
+    background-color: #c4d9e6;
+    text-align: center;
+    border-radius: 2%;
+}
+
+h2{
+
+    color: #dce3e7;
+    background-color: dimgrey;
+}
+
+.glyphicon.glyphicon-user.icono{
+
+    display: block;
+    font-size: 40px;
+    
+    margin: 0 auto;
+    color: #c4d9e6;
+}
